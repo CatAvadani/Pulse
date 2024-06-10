@@ -16,7 +16,6 @@ export default function DropdownMenu({session}: {session: any}) {
   return (
     <Menu as="div" className="relative inline-block text-left">
       <MenuButton>
-        {/* <UserCog2Icon width={33} height={33} /> */}
         <div className="relative h-10 w-10">
           <Image
             className="h-full w-full rounded-full object-cover object-center m-1"
@@ -63,7 +62,7 @@ export default function DropdownMenu({session}: {session: any}) {
                 Wish List
               </Link>
             </MenuItem>
-            {isAdmin && (
+            {isAdmin === true && (
               <MenuItem>
                 <Link
                   href="/admin"

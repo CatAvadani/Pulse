@@ -86,7 +86,11 @@ export default function Header() {
         </div>
         <div className="flex items-center gap-5">
           <SearchBar />
-          {session ? <DropdownMenu session={session} /> : <SignInButton />}
+          {session?.user ? (
+            <DropdownMenu session={session} />
+          ) : (
+            <SignInButton />
+          )}
           <Link data-cy="cart-link" href={"/checkout"}>
             <CartIcon />
           </Link>
